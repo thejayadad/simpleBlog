@@ -11,13 +11,13 @@ const AuthLinks = ({user}) => {
         ? <div>
               <button 
               className='btn btn_login' 
-              onClick={() => signIn('google')}              
+              onClick={signIn}              
               >LogIn</button>
           </div>
 
           : <div className='flex items-center gap-4'>
-            <span>{user?.email}</span>
             <Link href={`/profile${user?._id}`}>Profile</Link>
+            <Link href={'/upload'}>UpLoad</Link>
             <img
             className='w-14 h-14 text-white p-2  rounded-full'
             alt='profile'
