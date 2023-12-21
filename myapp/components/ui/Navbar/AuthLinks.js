@@ -9,10 +9,7 @@ const AuthLinks = ({user}) => {
       {
         !user
         ? <div>
-              <button 
-              className='btn btn_login' 
-              onClick={signIn}              
-              >LogIn</button>
+            <button className='btn btn_login' onClick={() => signIn('google')}>SignIn</button>
           </div>
 
           : <div className='flex items-center gap-4'>

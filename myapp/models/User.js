@@ -12,14 +12,14 @@ const UserSchema = new mongoose.Schema({
       },
       avatar: String,
       public_id: String,
-      followers: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-      }],
-      following: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-      }]   
+      // followers: [{
+      //   type: mongoose.Schema.Types.ObjectId,
+      //   ref: 'users'
+      // }],
+      // following: [{
+      //   type: mongoose.Schema.Types.ObjectId,
+      //   ref: 'users'
+      // }]   
 
 }, {timestamps: true})
 

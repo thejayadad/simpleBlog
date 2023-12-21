@@ -63,8 +63,6 @@ export const authOptions = {
     const newUser = {
       ...user._doc,
       _id: user._id.toString(),
-      total_followers: user.followers.length,
-      total_followings: user.followings.length,
       followers: [],
       followings: [],
       my_user: true

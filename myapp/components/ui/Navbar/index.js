@@ -12,7 +12,7 @@ console.log(user)
         <nav className='flex items-center justify-between mx-auto max-w-screen-xl'>
         <Logo />
         <SearchForm />
-        <AuthLinks user={user} />
+        <AuthLinks  user={user}  />
         </nav>
     </header>
   )

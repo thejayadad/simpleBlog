@@ -2,22 +2,15 @@ import mongoose from "mongoose";
 
 const PostSchema = new mongoose.Schema({
     title: String,
- 
-    imgUrl: String,
-
-
+     imgUrl: String,
     draft: {
       type: Boolean,
       default: false
     },
     creator: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
+      ref: 'users'
     },
-    favorite_users: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
-    }]   
 
 }, {timestamps: true})
 
