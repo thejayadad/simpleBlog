@@ -1,9 +1,11 @@
-import { getServerSession } from "next-auth"
-import { options } from "@/app/api/auth/[...nextauth]/options";
+'use server'
+const { authOptions } = require("@/app/api/auth/[...nextauth]/route")
+const { getServerSession } = require("next-auth")
 
 const getServerUser = async () => {
-    const session = await getServerSession(options)
-    return session?.user;
-}
+  const session = await getServerSession(authOptions);
 
-export default getServerUser
+  return session?.user;
+} 
+
+export default getServerUser;
